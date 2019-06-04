@@ -61,7 +61,7 @@ export default class Calculator extends Component {
     }
   }
 
-  addDigit(n) {git 
+  addDigit(n) {
     // check if the display value is a dot
     if (n === '.' && this.state.displayValue.includes('.')) {
       return
