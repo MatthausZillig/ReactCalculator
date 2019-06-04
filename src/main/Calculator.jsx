@@ -9,7 +9,6 @@ const initialState = {
   operation: null,
   values: [0, 0],
   current: 0,
-  audio: new Audio('./mouse-doubleclick-02.wav')
 }
 
  
@@ -25,12 +24,10 @@ export default class Calculator extends Component {
 
   // the initial state
   clearMemory() {
-    this.state.audio.play()
     this.setState({ ...initialState })
   }
 
   setOperation(operation) {
-    this.state.audio.play()
     if (this.state.current === 0) {
       this.setState({ operation, current: 1, clearDisplay: true })
     } else {
@@ -64,8 +61,7 @@ export default class Calculator extends Component {
     }
   }
 
-  addDigit(n) {
-    this.state.audio.play()
+  addDigit(n) {git 
     // check if the display value is a dot
     if (n === '.' && this.state.displayValue.includes('.')) {
       return
